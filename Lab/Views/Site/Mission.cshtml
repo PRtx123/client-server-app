@@ -1,0 +1,44 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<!doctype html>
+<html>
+<head>
+    <title>Вадим Сидоров</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="~/css/staticPage.css" />
+    <link rel="stylesheet" href="~/css/menu.css" />
+    <link rel="stylesheet" href="~/css/mission.css" />
+</head>
+<body>
+    <header>
+        <div class="div-menu">
+            <nav>
+                <ul>
+                    <li>
+                        <a style="text-decoration: none;" asp-area="" asp-controller="Site" asp-action="StaticPage">Обо мне</a>
+                    </li>
+                    <li>
+                        <a style="text-decoration: none;" asp-area="" asp-controller="Site" asp-action="Mission">НОД</a>
+                    </li>
+                    <li>
+                        <a style="text-decoration: none;" asp-area="" asp-controller="Site" asp-action="Books">Книги</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Введите через пробел два числа</h1>
+        <input id="str" class="inputNumbers" type="text"/>
+        <button class="button" onclick="TaskClick()">Решить</button>
+        <div id="divAnswer" class="div">
+            <p class="answerText">Ответ:</p>
+            <p id="answer" class="answer"></p>
+        </div>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/mission.js" asp-append-version="true"></script>
+</body>
+</html>

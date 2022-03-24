@@ -1,0 +1,51 @@
+﻿.inputNumbers {
+    width: 428px;
+    align-self: center;
+    border: none;
+    outline: none;
+    color: #8b00ff;
+    background: lightgrey;
+    padding: 5px;
+    border-radius: 7px;
+    font-size: 28px;
+    margin: 5px 0;
+}
+
+.button {
+    width: 155px;
+    align-self: center;
+    outline: none;
+    border: none;
+    border-radius: 7px;
+    font-size: 28px;
+    margin: 5px 0;
+    color: white;
+    background: #8b00ff;
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+.button:hover {
+    opacity: 0.94;
+}
+
+.div {
+    width: 100%;
+    align-self: center;
+    display: none;
+    justify-content: center;
+}
+
+.answerText {
+    text-align: center;
+    font-size: 28px;
+    color: black;
+    margin-right: 5px;
+}
+
+.answer {
+    text-align: center;
+    font-size: 28px;
+    color: #8b00ff;
+    margin-left: 5px;
+}

@@ -1,0 +1,70 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model IEnumerable<Lab.Book>
+<!doctype html>
+<html>
+<head>
+    <title>Вадим Сидоров</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="~/css/staticPage.css" />
+    <link rel="stylesheet" href="~/css/menu.css" />
+    <link rel="stylesheet" href="~/css/books.css" />
+</head>
+<body>
+    <header>
+        <div class="div-menu">
+            <nav>
+                <ul>
+                    <li>
+                        <a style="text-decoration: none;" asp-area="" asp-controller="Site" asp-action="StaticPage">Обо мне</a>
+                    </li>
+                    <li>
+                        <a style="text-decoration: none;" asp-area="" asp-controller="Site" asp-action="Mission">НОД</a>
+                    </li>
+                    <li>
+                        <a style="text-decoration: none;" asp-area="" asp-controller="Site" asp-action="Books">Книги</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <div class="books">
+            <table class="table">
+                <tr>
+                    <th class="text-center">Название</th>
+                    <th class="text-center">Автор</th>
+                    <th class="text-center">Жанр</th>
+                    <th class="text-center"></th>
+                </tr>
+                @foreach (var item in Model)
+                {
+                    <tr id="@item.Id">
+                        <td id="name-@item.Id" class="text-center">@item.Name</td>
+                        <td id="author-@item.Id" class="text-center">@item.Author</td>
+                        <td id="genre-@item.Id" class="text-center">@item.Genre</td>
+                        <td class="text-center">
+                            <button style="color: blue;" onclick="EditClick(@item.Id)">Изменить</button>
+                            <button style="color: red;" onclick="DeleteClick(@item.Id)">Удалить</button>
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+        <button class="addBook" onclick="AddClick()">Добавить книгу</button>
+    </div>
+    <div id="editContainer" class="edit" style="display: none;">
+        <div id="editData" class="editData">
+            <p>Книга</p>
+            <input id="name" type="text" placeholder="Название"/>
+            <input id="author" type="text" placeholder="Автор"/>
+            <input id="genre" type="text" placeholder="Жанр"/>
+            <button class="save" onclick="SaveClick()" style="outline: none;">Сохранить</button>
+        </div>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/books.js" asp-append-version="true"></script>
+</body>
+</html>

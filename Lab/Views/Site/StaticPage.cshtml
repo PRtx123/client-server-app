@@ -1,0 +1,34 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<!doctype html>
+<html>
+<head>
+    <title>Вадим Сидоров</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="~/css/staticPage.css" />
+    <link rel="stylesheet" href="~/css/menu.css" />
+</head>
+<body>
+    <header>
+        <div class="div-menu">
+            <nav>
+                <ul>
+                    <li>
+                        <a style="text-decoration: none;" asp-area="" asp-controller="Site" asp-action="StaticPage">Обо мне</a>
+                    </li>
+                    <li>
+                        <a style="text-decoration: none;" asp-area="" asp-controller="Site" asp-action="Mission">НОД</a>
+                    </li>
+                    <li>
+                        <a style="text-decoration: none;" asp-area="" asp-controller="Site" asp-action="Books">Книги</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Работу выполнил: Сидоров Вадим</h1>
+        <h1>Номер группы: ИКБО-07-18</h1>
+    </div>
+</body>
+</html>
